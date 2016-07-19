@@ -4,18 +4,17 @@ function github() {
       var ctrl = this;
 
       ctrl.start = function() {
-        githubApi.getNotifications().then(function(response){
-          console.log(response);
-        });
-      };  
+        githubApi.authorize();
+        // githubApi.getNotifications().then(function(response){
+        //   console.log(response);
+        // });
+      };
       $scope.notifications = [
             {"title": "Notification 1"},
             {"title": "Notification 2"}
-          ]
+          ];
 
-      githubApi.authorize().then(function(response){
-        ctrl.start();
-      });
+      ctrl.start();
 
     }],
     templateUrl: '../app/notifications.html'

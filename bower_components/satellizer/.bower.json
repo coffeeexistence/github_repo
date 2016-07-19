@@ -1,0 +1,19 @@
+{
+  "name": "satellizer",
+  "main": "dist/satellizer.js",
+  "homepage": "https://github.com/sahat/satellizer",
+  "dependencies": {
+    "angular": "1.3.x - 1.5.x"
+  },
+  "version": "0.15.1",
+  "_release": "0.15.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.15.1",
+    "commit": "38696067f37fd6b0b893e2423f596aff6af6d414"
+  },
+  "_source": "https://github.com/sahat/satellizer.git",
+  "_target": "^0.15.1",
+  "_originalSource": "satellizer",
+  "_direct": true
+}

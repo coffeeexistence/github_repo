@@ -1,4 +1,4 @@
-function githubApi($http) {
+function githubApi($auth, $http) {
   var service = this;
 
   var clientId = '0b3f9d81cd061c6f5f97';
@@ -7,7 +7,7 @@ function githubApi($http) {
   var baseUrl = "https://api.github.com/";
 
   service.authorize = function() {
-    return $http.get("https://github.com/login/oauth/authorize", {client_id: clientId});
+    $auth.authenticate('github');
   };
 
   service.getNotifications = function() {
