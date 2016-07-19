@@ -1,7 +1,18 @@
 function github() {
   return {
-    controller: function() {
-      console.log('hello world');
+    controller: function(githubApi) {
+      var ctrl = this;
+
+      ctrl.start = function() {
+        githubApi.getNotifications().then(function(response){
+          console.log(response);
+        });
+      };
+
+      githubApi.authorize().then(function(response){
+        ctrl.start();
+      });
+
     },
     template: 'hello world'
   }
